@@ -1,5 +1,6 @@
-import 'package:at_find/screens/HomeScreen.dart';
-import 'package:at_find/screens/onboarding.dart';
+
+import 'package:mi_card/screens/HomeScreen.dart';
+import 'package:mi_card/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
 
 
 
-/*home: Scaffold(
+      /*home: Scaffold(
         backgroundColor: Colors.white,
         body: Container(
           constraints: BoxConstraints.expand(),

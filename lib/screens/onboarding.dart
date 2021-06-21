@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 //import '../service/client_sdk_service.dart';
 import 'package:at_onboarding_flutter/at_onboarding_flutter.dart';
 import 'package:at_utils/at_logger.dart';
-import 'package:at_find/screens/HomeScreen.dart';
-import 'package:at_find/service/client_sdk_service.dart';
+import 'package:mi_card/screens/HomeScreen.dart';
+import 'package:mi_card/service/client_sdk_service.dart';
 import '../utils/constants.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -37,11 +37,11 @@ class _OnboardingScreen extends State<OnboardingScreen> {
         backgroundColor: Colors.white,
         body:
         Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget> [
-            TextButton(
-                onPressed: () async {
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget> [
+              TextButton(
+              onPressed: () async {
                   // TODO: Add in at_onboarding_flutter
                   Onboarding(
                     context: context,
@@ -62,31 +62,31 @@ class _OnboardingScreen extends State<OnboardingScreen> {
                   );
                 },
                 child: Text(AppStrings.scan_qr)),
-            SizedBox(
-              height: 10,
-            ),
-            TextButton(
-                onPressed: () async {
-                  KeyChainManager _keyChainManager =
-                  KeyChainManager.getInstance();
-                  var _atSignsList =
-                  await _keyChainManager.getAtSignListFromKeychain();
-                  _atSignsList?.forEach((element) {
-                    _keyChainManager.deleteAtSignFromKeychain(element);
-                  });
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text(
-                        'Keychain cleaned',
-                        textAlign: TextAlign.center,
-                      )));
-                },
-                child: Text(
-                  AppStrings.reset_keychain,
-                  style: TextStyle(color: Colors.blueGrey),
-                ))
-          ],
+              SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                  onPressed: () async {
+                    KeyChainManager _keyChainManager =
+                    KeyChainManager.getInstance();
+                    var _atSignsList =
+                    await _keyChainManager.getAtSignListFromKeychain();
+                    _atSignsList?.forEach((element) {
+                      _keyChainManager.deleteAtSignFromKeychain(element);
+                    });
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text(
+                          'Keychain cleaned',
+                          textAlign: TextAlign.center,
+                        )));
+                  },
+                  child: Text(
+                    AppStrings.reset_keychain,
+                    style: TextStyle(color: Colors.blueGrey),
+                  ))
+            ],
+          ),
         ),
-      ),
     );
   }
 }
