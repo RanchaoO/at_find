@@ -7,13 +7,14 @@ void main() {
   runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '@Protocol Demo',
       theme: ThemeData(
-        primarySwatch: Colors.red[300],
+        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: OnboardingScreen.id,

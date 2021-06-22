@@ -47,7 +47,7 @@ class _OnboardingScreen extends State<OnboardingScreen> {
                     context: context,
                     atClientPreference: atClientPreference,
                     domain: MixedConstants.ROOT_DOMAIN,
-                    appColor: Colors.red[300],
+                    appColor: Colors.red,
                     onboard: (value, atsign) {
                       ClientSdkService.getInstance().atClientServiceMap =
                           value;
@@ -82,7 +82,7 @@ class _OnboardingScreen extends State<OnboardingScreen> {
                   },
                   child: Text(
                     AppStrings.reset_keychain,
-                    style: TextStyle(color: Colors.blueGrey),
+                    style: TextStyle(color: Colors.blue),
                   ))
             ],
           ),

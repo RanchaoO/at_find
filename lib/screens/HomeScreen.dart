@@ -12,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return MaterialApp(
       title: 'at_find',
       theme: ThemeData(
-        primarySwatch: Colors.red[300],
+        primarySwatch: Colors.red[100],
       ),
       home: MyHomePage(title: 'at_find'),
     );
